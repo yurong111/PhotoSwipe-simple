@@ -10,6 +10,8 @@ window.onload = function() {
         ]
         // build items array
         loadImage(imgs);
+
+        document.getElementById('progress-bar').style.display = '';
     };
 
     var items = [];
@@ -20,6 +22,7 @@ window.onload = function() {
         if (i >= imgs.length) { //当所有图片都加载完毕，初始化图片展示组件
             setTimeout(function() {
                 initPhotoSwipe(items);
+                document.getElementById('progress-bar').style.display = 'none';
             }, 500)
             return;
         }
@@ -39,7 +42,7 @@ window.onload = function() {
         return items;
     }
 
-    openPhotoSwipe();
+    // openPhotoSwipe();
 
     document.getElementById('btn').onclick = openPhotoSwipe;
 
