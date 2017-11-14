@@ -2,8 +2,8 @@ window.onload = function() {
     /*图片展示*/
     var openPhotoSwipe = function() {
         var imgs = [
-            '/PhotoSwipeDemo/images/test2.jpeg',
-            '/PhotoSwipeDemo/images/test1.png',
+            'images/test2.jpeg',
+            'images/test1.png',
             'https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_b.jpg',
             'https://farm7.staticflickr.com/6175/6176698785_7dee72237e_b.jpg'
         ]
