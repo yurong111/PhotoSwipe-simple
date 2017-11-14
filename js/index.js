@@ -73,10 +73,7 @@ function initPhotoSwipe(items) {
 
 
 function setLoading(len, index) {
-    var progress = document.getElementById('progress-bar');
     var bar = document.getElementById('bar');
-    // var pWidth = progress.style.width;
-    // var bWidth = bar.style.width;
     bar.style.width = index/len*100 + '%';
     console.log('pWidth', index/len);
 }
