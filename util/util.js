@@ -1,12 +1,3 @@
-/*!function(a,b){
-    var c=a.documentElement,d="orientationchange"in window?"orientationchange":"resize",
-        e=function(){
-            var w=document.documentElement.clientHeight >= document.documentElement.clientWidth?640:1136
-            var a=c.clientWidth>w?w:c.clientWidth<320?320:c.clientWidth;
-            a&&(c.style.fontSize=100*(a/w)+"px")
-        };
-    a.addEventListener&&(b.addEventListener(d,e,!1),a.addEventListener("DOMContentLoaded",e,!1),e())
-}(document,window);*/
 
 //给html模板使用
 String.prototype.tmp = function(obj) {
@@ -16,6 +7,7 @@ String.prototype.tmp = function(obj) {
     });
 };
 
+/*高清方案*/
 (function (doc, win) {
     var docEl = doc.documentElement,
         resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
