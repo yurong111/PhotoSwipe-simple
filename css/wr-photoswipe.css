@@ -1,0 +1,13 @@
+
+#progress-bar {
+    display: none; position: fixed; top: 0; bottom: 0; left: 0; right: 0; width: 100%; background: rgba(0, 0, 0, .7);
+}
+
+
+#progress-bar .progress {
+    width: 160px; height: 6px; background: linear-gradient(to top ,#d0d0d0 33.3333%, #6e6e6e 66.6666%, #d0d0d0 100%); border-radius: 10px; position: absolute; top: 50%; left: 50%; margin-top: -3px; margin-left: -80px;
+}
+
+#progress-bar .bar {
+    background: linear-gradient(to top ,#6adcff 33.3333%, #39c 66.6666%, #6adcff 100%); width: 5%; height: 100%;border-radius: 10px; transition: width .1s;
+}
