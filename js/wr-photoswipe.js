@@ -1,7 +1,7 @@
 
 
 Photoswipe = {
-    appenHtml: function() {
+    _appenHtml: function() {
         var html = ' <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true"> \
             <div class="pswp__bg"></div> \
             <div class="pswp__scroll-wrap"> \
@@ -85,6 +85,7 @@ Photoswipe = {
     openPhotoSwipe: function(imgs) {
         var items = [];
         var i = 0;
+        Photoswipe._appenHtml();
         document.getElementById('progress-bar').style.display = 'block'; //显示
 
         /*加载每张图片*/
