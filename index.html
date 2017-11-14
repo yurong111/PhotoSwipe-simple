@@ -5,7 +5,7 @@
     <meta content="telephone=no" name="format-detection">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
     <title>Title</title>
-
+    <script src="util/util.js"></script>
     <!-- Core CSS file -->
     <link rel="stylesheet" href="css/photoswipe.css">
 
@@ -19,6 +19,12 @@
 <body>
     <div style="height: 200px; background: #CE272D; margin: 0; padding: 0; text-align: center">
         <button id="btn" style="height: 40px; line-height: 40px; text-align: center; color: #fff; background: #55ACEE; margin: 20px auto; display: inline-block; vertical-align: middle;">Open PhotoSwipe</button>
+    </div>
+
+    <div id="progress-bar" style="position: fixed; top: 0; bottom: 0; left: 0; right: 0; width: 100%; background: rgba(0, 0, 0, .7);">
+        <div class="" style="width: 160px; height: 6px; background: linear-gradient(to top ,#d0d0d0 33.3333%, #6e6e6e 66.6666%, #d0d0d0 100%); border-radius: 10px; position: absolute; top: 50%; left: 50%; margin-top: -3px; margin-left: -80px;">
+            <div id="bar" style="background: linear-gradient(to top ,#6adcff 33.3333%, #39c 66.6666%, #6adcff 100%); width: 0; height: 100%;border-radius: 10px; transition: width .1s;"></div>
+        </div>
     </div>
 
     <!-- Root element of PhotoSwipe. Must have class pswp. -->

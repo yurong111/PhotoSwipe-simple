@@ -4,8 +4,9 @@ window.onload = function() {
         var imgs = [
             'images/test2.jpeg',
             'images/test1.png',
-            'https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_b.jpg',
-            'https://farm7.staticflickr.com/6175/6176698785_7dee72237e_b.jpg'
+            'http://img1.imgtn.bdimg.com/it/u=107737178,604807193&fm=27&gp=0.jpg',
+            // 'https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_b.jpg',
+            // 'https://farm7.staticflickr.com/6175/6176698785_7dee72237e_b.jpg'
         ]
         // build items array
         loadImage(imgs);
@@ -17,7 +18,9 @@ window.onload = function() {
     /*加载每张图片*/
     var loadImage = function(imgs) {
         if (i >= imgs.length) { //当所有图片都加载完毕，初始化图片展示组件
-            initPhotoSwipe(items);
+            setTimeout(function() {
+                initPhotoSwipe(items);
+            }, 500)
             return;
         }
         // 创建对象
@@ -26,17 +29,21 @@ window.onload = function() {
         img.src = imgs[i];
 
         img.onload = function(){
+            console.log('***');
             items.push(getPhotoSwipeItem(img)); //将图片信息对象存入数组中
             i++;
+            setLoading(imgs.length, i);
             loadImage(imgs);
         };
 
         return items;
     }
 
-    // openPhotoSwipe();
+    openPhotoSwipe();
 
     document.getElementById('btn').onclick = openPhotoSwipe;
+
+
 }
 
 /*获取每张图片的基础信息*/
@@ -63,3 +70,14 @@ function initPhotoSwipe(items) {
     var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
     gallery.init();
 }
+
+
+function setLoading(len, index) {
+    var progress = document.getElementById('progress-bar');
+    var bar = document.getElementById('bar');
+    // var pWidth = progress.style.width;
+    // var bWidth = bar.style.width;
+    bar.style.width = index/len*100 + '%';
+    console.log('pWidth', index/len);
+}
+
