@@ -40,7 +40,8 @@ Photoswipe = {
             </div> \
         </div>';
 
-        $('body').append(html);
+        // $('body').append(html);
+        document.getElementsByTagName("body")[0].innerHTML+=html;
     },
 
     openPhotoSwipe: function(imgs) {
