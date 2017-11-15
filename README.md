@@ -177,6 +177,7 @@ var items = [
 
 ## 对自己封装好的代码使用方式
 photoswipe可通过官网或者文章前三步进行使用。官网例子也是很成熟，但是方便自己日后重用，简单封装了一下，并记录如何使用。
+
 ![image.png](http://upload-images.jianshu.io/upload_images/5499785-1cb8d6b84d78935f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 以上是文件目录结构，除了框选的图片以及index.js是项目调用所需，其他则是使用封装后的插件所必须引入的。其中带有wr-前缀的则是自己加以封装的代码。而util.js主要是高清方案，如果不需要，则需要修改wr-photoswipe.css的rem单位修改为相应的px单位，不多，主要是进度条的样式而已。
@@ -198,6 +199,7 @@ window.onload = function() {
 
 ## 效果程序
 [访问](http://www.mini123.link:8010/)
+
 ![image.png](http://upload-images.jianshu.io/upload_images/5499785-bf19645e59e0b5dd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ![image.png](http://upload-images.jianshu.io/upload_images/5499785-992d97fca3fbdced.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
